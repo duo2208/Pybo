@@ -1,0 +1,33 @@
+{% load static %}
+
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pybo</title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <!-- jQuery JS-->
+    <script src="{% static 'jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- js -->
+    {% block script %}
+    {% endblock %}
+</body>
+
+<footer class="footer bg-light border-top">
+    <div class="container py-3">
+      <p class="text-muted">Place sticky footer content here.</p>
+    </div>
+</footer>
+
+</html>

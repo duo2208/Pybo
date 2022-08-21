@@ -5,6 +5,7 @@ from django.db.models import Q
 from ..models import Question
 
 def index(request):
+    3/0
     question_list = Question.objects.order_by('-create_date')
     kw = request.GET.get('kw', '')      # 검색어
     page = request.GET.get('page', '1') # 페이지

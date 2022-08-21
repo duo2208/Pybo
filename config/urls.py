@@ -9,5 +9,5 @@ urlpatterns = [
     path('pybo/', include('pybo.urls')),
 ]
 
-handler404 = 'common.views.page_not_found_400'
-handler500 = 'common.views.page_not_found_500'
+handler404 = 'common.views.page_not_found'
+handler500 = 'common.views.server_error'

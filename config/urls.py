@@ -3,7 +3,7 @@ from django.urls import path, include
 from pybo.views import base_views
 
 urlpatterns = [
-    path('', base_views.index, name='index'),
+    path('', base_views.qna_list, name='qna_list'),
     path('admin/', admin.site.urls),
     path('common/', include('common.urls')),
     path('pybo/', include('pybo.urls')),

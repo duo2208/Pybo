@@ -2,11 +2,11 @@
 {% load pybo_filter %}
 
 {% block content %}
-    <h5 class="my-3 font-weight-bold">질문과답변</h5>
+    <h5 class="my-3 font-weight-bold">버그및건의</h5>
 
     <div class="row justify-content-between mb-3">
         <div class="col-6">
-            <a href="{% url 'pybo:question_create' %}" class="btn btn-dark mb-3">Ask Question</a>
+            <a href="{% url 'pybo:question_create' %}" class="btn btn-dark mb-3">Contact</a>
         </div>
         <div class="col-6">
             <div class="input-group">
@@ -58,7 +58,7 @@
                     {% endfor %}
                 {% else %}
                     <tr>
-                        <td colspan="4"> no question </td>
+                        <td colspan="4"> no contact </td>
                     </tr>
                 {% endif %}
             </tbody>
@@ -117,7 +117,7 @@
 
 
 
-<form id="searchForm" method="get" action="{% url 'qna_list' %}">
+<form id="searchForm" method="get" action="#">
     <input type="hidden" id="kw" name="kw" value="{{ kw|default_if_none:'' }}">
     <input type="hidden" id="page" name="page" value="{{ page }} ">
 </form>

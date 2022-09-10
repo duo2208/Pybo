@@ -8,7 +8,7 @@ from ..models import Question
 
 logger = logging.getLogger('pybo')
 
-def index(request):
+def qna_list(request):
     logger.info("INFO 레벨로 출력")
 
     question_list = Question.objects.order_by('-create_date')
@@ -28,6 +28,9 @@ def index(request):
 
     context = {'question_list': page_obj, 'page': page, 'kw': kw}
     return render(request, 'pybo/question_list.html', context)
+
+def bug_list(request):
+    return render(request, 'pybo/bug_list.html')
 
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)

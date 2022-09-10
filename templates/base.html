@@ -5,6 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="{% static 'image/favicon.png' %}">
     <title>Pybo</title>
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
@@ -16,18 +17,33 @@
 <body>
     {% include 'navbar.html' %}
 
-    {% block content %}
-    {% endblock %}
+    <div class="container my-3" style="height: auto !imoprtant;">
+        <div class="row" style="height: auto !important;">
+            <div class="col-sm-12 col-md-3 col-lg-2 p-2" style="height: auto !important;">
+                {% include 'sidebar.html' %}
+            </div>
 
+            <div class="col-sm-12 col-md-9 col-lg-10 p-2" style="height: auto !important;">
+                <div id="content" class="border-top border-secondary pb-3" style="height: auto !important">
+                <div class="content-block mx-4 my-2" style="height: auto !important">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <footer class="footer bg-light border-top">
+        <div class="container mt-3">
+          <p class="text-muted">©2022 • PYBO.KR</p>
+        </div>
+    </footer>-->
+    
     <!-- js -->
     {% block script %}
     {% endblock %}
 </body>
-
-<footer class="footer bg-light border-top">
-    <div class="container py-3">
-      <p class="text-muted">©2022 • PYBO.KR</p>
-    </div>
-</footer>
 
 </html>

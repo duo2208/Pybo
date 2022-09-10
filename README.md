@@ -2,7 +2,7 @@
 basic_DashBoard 형태의 지식 공유 웹서비스
 
 * Stack : Django, Python, NginX, AWS
-* 기간 : 2022.08.12 ~ 2022.08.19
+* 기간 : 2022.08.12 ~ 2022.08.22
 * 참고 : https://wikidocs.net/book/4223
 * 최종 결과물 참고 : http://django.pybo.kr
 * 최종 결과물 : http://13.209.69.95/    (로컬 IP를 사용)

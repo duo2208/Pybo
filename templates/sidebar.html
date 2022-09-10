@@ -1,6 +1,11 @@
 <nav id="sidebar" class="border-top border-secondary">
     <div class="list-group">
-        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light active" href="{% url 'pybo:qna_list' %}">질문과답변</a>
-        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light" href="{% url 'pybo:bug_list' %}">버그및건의</a>
+        {% url 'pybo:qna_list' as url %}
+        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light 
+        {% if request.path == url %}active{% endif %}" href="{{ url }}">질문과답변</a>
+
+        {% url 'pybo:bug_list' as url %}
+        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light
+        {% if request.path == url %}active{% endif %}" href="{{ url }}">버그및건의</a>
     </div>
 </nav>
